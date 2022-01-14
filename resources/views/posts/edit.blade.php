@@ -3,7 +3,7 @@
 @section('title', 'Modifica post')
 
 @section('main_content')
-<form action="{{route('posts.update')}}" method="post">
+<form action="{{route('posts.update', $post->id)}}" method="post">
   @csrf
   @method("PATCH")
 
@@ -41,7 +41,7 @@
 
   <div class="text-center">
 
-      <button type="submit" class="btn btn-success"> Modifica </button>
+      <input type="submit" class="btn btn-success" value="Modifica">
       
   </div>
 @endsection
