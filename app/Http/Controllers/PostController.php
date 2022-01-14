@@ -74,7 +74,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $post = Comic::findOrFail($id);
+        $post = Post::findOrFail($id);
         return view("posts.edit", ["post"=>$post]);
     }
 
