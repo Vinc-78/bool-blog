@@ -10,7 +10,7 @@ class Post extends Model
         'title',
         'subtitle',
         'content',
-        'autor',
+        'author',
         'coverImg',
         'category'
       ];

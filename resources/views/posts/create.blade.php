@@ -43,13 +43,13 @@
     </div>
 
     <div class="mb-3">
-        <label for="autor" class="form-label">Autore</label>
-        <input type="text" class="form-control" id="autor" name="autor">
+        <label for="author" class="form-label">Autore</label>
+        <input type="text" class="form-control" id="author" name="author">
     </div>
 
     <div class="mb-3">
         <label for="category" class="form-label">Categoria</label>
-        <input type="text" class="form-control" id="category" name="categoryr">
+        <input type="text" class="form-control" id="category" name="category">
     </div>
 
     <div class="text-center">

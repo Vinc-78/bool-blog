@@ -9,7 +9,7 @@ class CreatePostsTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return voidphp artisan migrate  
      */
     public function up()
     {
@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('subtitle')->nullable();
             $table->longText('content');
-            $table->string('autor');
+            $table->string('author');
             $table->string('coverImg')->nullable();
             $table->string('category');
             $table->timestamps();
