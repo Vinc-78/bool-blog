@@ -14,7 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view("posts.index");
+        $posts = Post::all();
+        return view('posts.index', ["posts"=>$posts]);
     }
 
     /**
@@ -35,6 +36,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title'=>'required|min:5',
+            'subtitle'=>'required|min:5',
+            'content'=>'required|min:30',
+            'author'=>'required',
+            'coverImg'=>'url',
+            'category'=>'required',
+           
+        ]);
         $post = new Post();
 
         $post->fill($request->all());
@@ -52,7 +62,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        return view("posts.show",["post"=>$post]);
     }
 
     /**
@@ -63,7 +74,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Comic::findOrFail($id);
+        return view("posts.edit", ["post"=>$post]);
     }
 
     /**
@@ -73,9 +85,22 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title'=>'required|min:5',
+            'subtitle'=>'required|min:5',
+            'content'=>'required|min:30',
+            'author'=>'required',
+            'coverImg'=>'url',
+            'category'=>'required',
+        ]);
+
+        $data = $request->all();
+        $post->update($data);
+
+        return redirect()->route("posts.show",$post->id)->with("msg","Post modificato correttamente");
+
     }
 
     /**
@@ -84,8 +109,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return redirect()->route("posts.index")->with("msg","Post eliminato Correttamente");
     }
 }
