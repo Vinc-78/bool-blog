@@ -10,6 +10,11 @@
     <img src="{{$post['coverimg']}}" alt="">
     <p>{{$post['category']}}</p>
 
+    <form action="{{ route('post.destroy', ['id' => $post->id])}}" method="post">
+        @csrf
+        @method('DELETE')
+        <input type="submit" value="Cancella Post">
+    </form>
 
     
     
