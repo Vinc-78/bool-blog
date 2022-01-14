@@ -41,7 +41,7 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect()->route('welcome') ;
+        return redirect()->route('home.index');
     }
 
     /**
