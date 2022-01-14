@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Modifica post')
+@section('title', 'Modifica post: ' . $post->title)
 
 @section('main_content')
 <form action="{{route('posts.update', $post->id)}}" method="post">

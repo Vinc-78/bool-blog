@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'show')
+@section('title', "Post - " . $post->title)
 
 @section('main_content')
     <h1>{{$post['title']}}</h1>
