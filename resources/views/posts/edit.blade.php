@@ -1,8 +1,31 @@
 @extends('layouts.default')
 
-@section('title', 'Modifica post')
+@section('title', 'Modifica post: ' . $post->title)
+
+@section('page_header')
+<header class="py-5 bg-light border-bottom mb-4">
+  <div class="container">
+      <div class="text-center my-5">
+          <h1 class="fw-bolder">Modifica Post</h1>
+          
+      </div>
+  </div>
+</header>
+@endsection
 
 @section('main_content')
+
+@if (!empty($errors->all()))
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                @foreach ($errors->all() as $item)
+                    <li>{{$item}}</li>
+                @endforeach
+                </ul>
+                </div>
+            @endif
+
+
 <form action="{{route('posts.update', $post->id)}}" method="post">
   @csrf
   @method("PATCH")
