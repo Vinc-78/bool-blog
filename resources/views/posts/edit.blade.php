@@ -19,8 +19,7 @@
 
   <div class="mb-3">
       <label for="content" class="form-label">Contenuto</label>
-      <textarea  class="form-control" id="content" name="content" rows="3" value="{{$post->content}}">
-      </textarea >
+      <textarea  class="form-control" id="content" name="content" rows="3">{{$post->content}}</textarea >
   </div>
 
 
