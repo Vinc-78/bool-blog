@@ -17,7 +17,7 @@
                                 <h5 class="card-title">{{ $post->title }}</h5>
                                 <h4 class="card-title">{{ $post->subtitle }}</h4>
                                 <p class="card-text">{{ $post->content }}</p>
-                                <a href="{{ route("posts.show") }}" class="btn btn-primary">Vedi il Post</a>
+                                <a href="{{ route("posts.show", $posts->id) }}" class="btn btn-primary">Vedi il Post</a>
                             </div>
                         </div>
                     </div>
