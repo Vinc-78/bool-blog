@@ -15,6 +15,5 @@
 
 @section('main_content')
     <h2 class="mb-5">Benvenuto sul blog di Boolean</h2>
-   
-    <a href="{{ route("posts.index") }}" class="btn btn-success">vai alla sezione dei posts</a>
+    <a href="{{ route("posts.index") }}" class="btn btn-success">Vai alla sezione dei post</a>
 @endsection

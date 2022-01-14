@@ -15,8 +15,6 @@
 
 @section('main_content')
     <div class="container py-4">
-        <h1 class="py-4">questa è la pagina principale dei posts</h1>
-
         <div class="container">
             <div class="row">
                 @foreach ($posts as $post)
@@ -37,6 +35,6 @@
             </div>
         </div>
 
-        <a href="{{ route("posts.create") }}" class="btn btn-success mt-5">crea un nuovo post</a>
+        <a href="{{ route("posts.create") }}" class="btn btn-success mt-5">Crea un nuovo post</a>
     </div>
 @endsection
