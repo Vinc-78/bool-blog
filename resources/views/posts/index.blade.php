@@ -25,8 +25,8 @@
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="{{ $post->coverImg }}" alt="alt {{ $post->title }}">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $post->title }}</h5>
-                                <h4 class="card-title">{{ $post->subtitle }}</h4>
+                                <h4 class="card-title">{{ $post->title }}</h4>
+                                <h5 class="card-title">{{ $post->subtitle }}</h5>
                                 <p class="card-text">{{ $post->content }}</p>
                                 <a href="{{ route("posts.show", $post->id) }}" class="btn btn-primary">Vedi il Post</a>
                             </div>
