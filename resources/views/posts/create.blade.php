@@ -20,6 +20,14 @@
 <form action="{{route('posts.store')}}" method="post">
     @csrf
 
+    @if (!empty($errors->all()))
+            <div class="alert alert-danger" role="alert">
+                @foreach ($errors->all() as $item)
+                    <strong>{{$item}}</strong>
+                @endforeach
+                </div>
+            @endif
+
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
         <input type="text" class="form-control" id="title" name="title">
