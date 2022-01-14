@@ -14,5 +14,7 @@
 @endsection
 
 @section('main_content')
-    <h2>Benvenuto sul blog di Boolean</h2>
+    <h2 class="mb-5">Benvenuto sul blog di Boolean</h2>
+   
+    <a href="{{ route("posts.index") }}" class="btn btn-succes">vai alla sezione dei posts</a>
 @endsection
