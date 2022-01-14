@@ -4,4 +4,13 @@
 
 @section('main_content')
     <h1>{{$post['title']}}</h1>
+    <h2>{{$post['subtitle']}}</h2>
+    <p>{{$post['content']}}</p>
+    <p>{{$post['author']}}</p>
+    <img src="{{$post['coverimg']}}" alt="">
+    <p>{{$post['category']}}</p>
+
+
+    
+    
 @endsection
