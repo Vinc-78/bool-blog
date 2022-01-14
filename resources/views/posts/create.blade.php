@@ -43,8 +43,8 @@
     </div>
 
     <div class="mb-3">
-        <label for="author" class="form-label">Autore</label>
-        <input type="text" class="form-control" id="author" name="author">
+        <label for="autor" class="form-label">Autore</label>
+        <input type="text" class="form-control" id="autor" name="autor">
     </div>
 
     <div class="mb-3">
