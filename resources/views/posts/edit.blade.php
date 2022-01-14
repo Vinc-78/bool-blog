@@ -3,6 +3,18 @@
 @section('title', 'Modifica post: ' . $post->title)
 
 @section('main_content')
+
+@if (!empty($errors->all()))
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                @foreach ($errors->all() as $item)
+                    <li>{{$item}}</li>
+                @endforeach
+                </ul>
+                </div>
+            @endif
+
+            
 <form action="{{route('posts.update', $post->id)}}" method="post">
   @csrf
   @method("PATCH")
