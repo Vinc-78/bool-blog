@@ -2,6 +2,17 @@
 
 @section('title', 'posts')
 
+@section('page_header')
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="fw-bolder">Posts</h1>
+            
+        </div>
+    </div>
+</header>
+@endsection
+
 @section('main_content')
     <div class="container py-4">
         <h1 class="py-4">questa è la pagina principale dei posts</h1>
