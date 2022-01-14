@@ -10,10 +10,12 @@
     <img src="{{$post['coverimg']}}" alt="">
     <p>{{$post['category']}}</p>
 
-    <form action="{{ route('post.destroy', ['id' => $post->id])}}" method="post">
+    <a href="{{route("posts.edit", $post->id)}}" class="btn btn-secondary mb-3">Modifica post</a>
+
+    <form action="{{ route('posts.destroy', $post->id)}}" method="post">
         @csrf
         @method('DELETE')
-        <input type="submit" value="Cancella Post">
+        <input class="btn btn-danger" type="submit" value="Cancella Post">
     </form>
 
     
