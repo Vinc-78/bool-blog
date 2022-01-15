@@ -20,6 +20,12 @@
         @yield('page_header')
         <!-- Page content-->
         <div class="container">
+            
+           {{-- Messaggio passato dal controller --}}
+            <div style="background-color: rgb(96, 123, 245); 
+            text-align:center;  
+            color:white">{{session('msg')}}</div>
+
             <div class="row">
                 <!-- Blog entries-->
                 <div class="col-lg-8">
