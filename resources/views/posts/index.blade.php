@@ -53,6 +53,8 @@
 
                 @endforeach
             </div>
+            
+  <script src="{{asset('js/app.js')}}"></script>
         </div>
 
         <a href="{{ route("posts.create") }}" class="btn btn-success mt-5">Crea un nuovo post</a>
