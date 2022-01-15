@@ -19380,6 +19380,15 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+window.addEventListener("DOMContentLoaded", function () {
+  $form = document.querySelector(".delete-form");
+  $form.addEventListener("submit", function (e) {
+    if (!confirm("Confermi di voler eliminare il post?")) {
+      e.preventDefault();
+    }
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
