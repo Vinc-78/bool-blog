@@ -32,39 +32,83 @@
 
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
-        <input type="text" class="form-control" id="title" name="title">
+        <input type="text" class="form-control {{$errors->has("title") ? 'is-invalid' : ''}}" 
+        id="title" name="title" value="{{old("title")}}">
+        
+        @if ($errors->has("title"))
+            <div class="invalid-feeback">
+                {{ $errors->get("title")[0]}}
+            </div>
+        @endif
+    
     </div>
 
     <div class="mb-3">
         <label for="subtitle" class="form-label">Subtitolo</label>
-        <input type="text" class="form-control" id="subtitle" name="subtitle">
+        <input type="text" class="form-control {{$errors->has("subtitle") ? 'is-invalid' : ''}}" 
+        id="subtitle" name="subtitle" value="{{old("subtitle")}}">
+
+        @if ($errors->has("title"))
+            <div class="invalid-feeback">
+                {{ $errors->get("subtitle")[0]}}
+            </div>
+        @endif
     </div>
 
     <div class="mb-3">
         <label for="content" class="form-label">Contenuto</label>
-        <textarea  class="form-control" id="content" name="content" rows="3">
+        <textarea  class="form-control {{$errors->has("content") ? 'is-invalid' : ''}}" 
+            id="content" name="content" rows="3" value="{{old("content")}}">
         </textarea >
+
+        @if ($errors->has("title"))
+            <div class="invalid-feeback">
+                {{ $errors->get("content")[0]}}
+            </div>
+        @endif
     </div>
 
 
     <div class="mb-3">
         <label for="coverImg" class="form-label">Immagine Principale</label>
-        <input type="text" class="form-control" id="coverImg" name="coverImg">
+        <input type="text" class="form-control {{$errors->has("coverImg") ? 'is-invalid' : ''}}" 
+        id="coverImg" name="coverImg" value="{{old("coverImg")}}">
+
+        @if ($errors->has("title"))
+            <div class="invalid-feeback">
+                {{ $errors->get("coverImg")[0]}}
+            </div>
+        @endif
     </div>
 
     <div class="mb-3">
         <label for="author" class="form-label">Autore</label>
-        <input type="text" class="form-control" id="author" name="author">
+        <input type="text" class="form-control {{$errors->has("author") ? 'is-invalid' : ''}}" 
+        id="author" name="author" value="{{old("author")}}">
+
+        @if ($errors->has("title"))
+            <div class="invalid-feeback">
+                {{ $errors->get("author")[0]}}
+            </div>
+        @endif
     </div>
 
     <div class="mb-3">
         <label for="category" class="form-label">Categoria</label>
-        <input type="text" class="form-control" id="category" name="category">
+        <input type="text" class="form-control {{$errors->has("category") ? 'is-invalid' : ''}}" 
+        id="category" name="category" value="{{old("category")}}">
+
+        @if ($errors->has("title"))
+            <div class="invalid-feeback">
+                {{ $errors->get("category")[0]}}
+            </div>
+        @endif
     </div>
 
     <div class="text-center">
 
         <button type="submit" class="btn btn-success"> Crea </button>
+        <button type="reset" class="btn btn-secondary"> Reset</button>
         
     </div>
 
