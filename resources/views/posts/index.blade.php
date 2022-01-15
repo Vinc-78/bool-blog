@@ -16,12 +16,14 @@
 @section('main_content')
     <div class="container py-4">
         <div class="container">
-            <div class="row">
+            <div class="row-cols-1">
                 @foreach ($posts as $post)
                     
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{ $post->coverImg }}" alt="alt {{ $post->title }}">
+                    <div class="col my-4">
+                        <div class="card my_card">
+                            <div class="my_card_img_cotnainer">
+                                <img class="card-img-top" src="{{ $post->coverImg }}" alt="alt {{ $post->title }}">
+                            </div>
                             <div class="card-body">
                                 <h4 class="card-title">{{ $post->title }}</h4>
                                 <h5 class="card-title">{{ $post->subtitle }}</h5>
