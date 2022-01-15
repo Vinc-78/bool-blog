@@ -17,14 +17,29 @@
           <p class="card-text"><small class="text-muted">by {{$post->author}}</small></p>
           <p>{{$post['category']}}</p>
 
-          <a href="{{route("posts.edit", $post->id)}}" class="btn btn-secondary mb-3">Modifica post</a>
-<div class="d-flex">
+         
+          <div class="d-flex style-btn pt-2">
+            <a style="text-decoration: none" href="{{route("posts.edit", $post->id)}}">Modifica</a>
+
+            <form class="form-find delete-form"  action="{{ route('posts.destroy', $post->id)}}" method="POST">
+              @csrf
+              @method("delete")
+
+
+              <button  class="btn-form-style" type="submit"><span>Elimina</span></button>
+            </form>
+        </div>
+          
+{{-- <div class="d-flex">
+
+  <a href="{{route("posts.edit", $post->id)}}" class="btn btn-secondary mb-3">Modifica post</a>
+
     <form action="{{ route('posts.destroy', $post->id)}}" method="post" class="delete-form">
         @csrf
         @method('DELETE')
         <input class="btn btn-danger" type="submit" value="Cancella Post">
     </form>
-</div>
+</div> --}}
         </div>
       </div>
     </div>
