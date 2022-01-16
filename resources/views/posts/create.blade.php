@@ -17,7 +17,7 @@
 
 @section('main_content')
 
-<form action="{{route('posts.store')}}" method="post">
+<form action="{{route('posts.store')}}" method="post" class="my-3">
     @csrf
 
     @if (!empty($errors->all()))
@@ -109,6 +109,7 @@
 
         <button type="submit" class="btn btn-success"> Crea </button>
         <button type="reset" class="btn btn-secondary"> Reset</button>
+        <a href="{{route('posts.index')}}" class="btn btn-primary">Torna ai post</a>
         
     </div>
 

@@ -26,7 +26,7 @@
             @endif
 
 
-<form action="{{route('posts.update', $post->id)}}" method="post">
+<form action="{{route('posts.update', $post->id)}}" method="post" class="my-3">
   @csrf
   @method("PATCH")
 
@@ -64,6 +64,7 @@
   <div class="text-center">
 
       <input type="submit" class="btn btn-success" value="Modifica">
+      <a href="{{route('posts.index')}}" class="btn btn-primary">Torna ai post</a>
       
   </div>
 @endsection

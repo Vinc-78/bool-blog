@@ -16,8 +16,6 @@
           <p class="card-text">{{$post['content']}}</p>
           <p class="card-text"><small class="text-muted">by {{$post->author}}</small></p>
           <p>{{$post['category']}}</p>
-
-         
           <div class="d-flex style-btn pt-2">
             <a style="text-decoration: none" href="{{route("posts.edit", $post->id)}}">Modifica</a>
 
@@ -44,6 +42,7 @@
       </div>
     </div>
   </div>
+  <a href="{{route('posts.index')}}" class="btn btn-primary mb-3">Torna ai post</a>
 
 
   <script src="{{asset('js/app.js')}}"></script>
